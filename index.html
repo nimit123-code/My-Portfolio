@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nimit Goel | Aspiring Product Manager & Startup Operator</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Three.js and GSAP for premium animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">NGOEL<span class="dot">.</span></a>
+            <ul class="nav-links">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#contact" class="nav-link btn-primary-sm">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main data-scroll-container>
+        
+        <!-- Hero Section -->
+        <section id="home" class="hero section">
+            <!-- Canvas container for 3D Background -->
+            <div id="canvas-container"></div>
+            
+            <div class="hero-content">
+                <span class="greeting stagger-text">Hi, I'm</span>
+                <h1 class="stagger-text">Nimit Goel</h1>
+                <h2 class="stagger-text">Aspiring Product Manager <br><span class="gradient-text gradient-1">& Startup Operator</span></h2>
+                <p class="location stagger-text">📍 Delhi, India</p>
+                
+                <div class="hero-ctas stagger-text">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+            
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <div class="arrow"></div>
+            </div>
+        </section>
+
+        <!-- Resume Download Section -->
+        <section id="resume" class="resume section">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <span class="eyebrow">Resume</span>
+                    <h2>Download <span class="gradient-text gradient-2">PDF</span></h2>
+                </div>
+
+                <div class="resume-download-card glass-card reveal-up">
+                    <p class="resume-download-desc">Click below to download my latest resume as a PDF.</p>
+
+                    <div class="resume-download-actions">
+                        <!-- PDF lives next to index.html (no assets/ folder needed for GitHub upload) -->
+                        <a
+                            id="resume-pdf-link"
+                            href="resume.pdf"
+                            class="btn btn-primary"
+                            download="Nimit-Resume.pdf"
+                            aria-label="Download Nimit Goel resume PDF"
+                        >
+                            Download PDF
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about section">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <span class="eyebrow">Discover</span>
+                    <h2>About <span class="gradient-text gradient-2">Me</span></h2>
+                </div>
+                
+                <div class="about-grid">
+                    <div class="about-text glass-card reveal-up">
+                        <p>I am a BBA (DBE) student at IIM Bangalore with hands-on experience in building and scaling early-stage ventures. I am currently co-founding <strong>Innerbot</strong>, where I am developing an AI-powered learning platform to enhance student experiences.</p>
+                        <p>I have worked across startup consulting, product development, market research, and operations. I enjoy solving real-world problems using structured thinking, data, and execution.</p>
+                        
+                        <div class="skills-container">
+                            <h3>Core Competencies</h3>
+                            <div class="skills-tags">
+                                <span class="skill-tag">Product Strategy</span>
+                                <span class="skill-tag">Market Analysis</span>
+                                <span class="skill-tag">Startup Operations</span>
+                                <span class="skill-tag">Leadership & Ownership</span>
+                                <span class="skill-tag">Data Integration</span>
+                                <span class="skill-tag">Advanced Excel</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects section">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <span class="eyebrow">Showcase</span>
+                    <h2>Featured <span class="gradient-text gradient-3">Projects</span></h2>
+                </div>
+                
+                <div class="projects-grid">
+                    
+                    <!-- Project 1 -->
+                    <div class="project-card tilt-card reveal-up" data-tilt>
+                        <div class="project-content">
+                            <span class="project-number">01</span>
+                            <h3>Innerbot <br><span class="project-subtitle">AI Learning Platform</span></h3>
+                            <ul>
+                                <li><strong>Role:</strong> Co-founder, Led a 4-member founding team</li>
+                                <li><strong>Core Focus:</strong> Product development, validation, execution</li>
+                                <li>Built an MVP using AI to improve student learning experiences</li>
+                                <li>Initiated pilot discussions with 5 premier schools for validation</li>
+                            </ul>
+                        </div>
+                        <div class="project-glow"></div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card tilt-card reveal-up" data-tilt>
+                        <div class="project-content">
+                            <span class="project-number">02</span>
+                            <h3>Startup Consulting <br><span class="project-subtitle">U2CA Consultants</span></h3>
+                            <ul>
+                                <li>Worked extensively on 40+ startup mandates</li>
+                                <li>Created deep-dive investor pitch decks</li>
+                                <li>Developed comprehensive market analyses</li>
+                                <li>Applied TAM-SAM-SOM frameworks and competitive benchmarking</li>
+                            </ul>
+                        </div>
+                        <div class="project-glow"></div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card tilt-card reveal-up" data-tilt>
+                        <div class="project-content">
+                            <span class="project-number">03</span>
+                            <h3>Perfume Micro-Venture <br><span class="project-subtitle">Entrepreneurship</span></h3>
+                            <ul>
+                                <li>Started operations with extremely low capital of ₹250</li>
+                                <li>Generated ₹599 in revenue achieving a 257% ROI</li>
+                                <li>Conducted real-world market testing directly with consumers</li>
+                                <li>Demonstrated rapid iteration and validated learning</li>
+                            </ul>
+                        </div>
+                        <div class="project-glow"></div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="project-card tilt-card reveal-up" data-tilt>
+                        <div class="project-content">
+                            <span class="project-number">04</span>
+                            <h3>CBG Industry Analysis <br><span class="project-subtitle">Market Research</span></h3>
+                            <ul>
+                                <li>Conducted extensive market research utilizing TAM-SAM-SOM mapping</li>
+                                <li>Estimated massive environmental impact (8,000 tCO₂ reduction)</li>
+                                <li>Mapped the entire comprehensive end-to-end value chain</li>
+                                <li>Extracted strategic insights for sector entry strategies</li>
+                            </ul>
+                        </div>
+                        <div class="project-glow"></div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience & Achievements Section -->
+        <section id="experience" class="timeline-section section">
+            <div class="container">
+                <div class="timeline-grid">
+                    
+                    <!-- Experience -->
+                    <div class="timeline-column reveal-up">
+                        <div class="section-header">
+                            <span class="eyebrow">Professional</span>
+                            <h2>Experience</h2>
+                        </div>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <h4>Co-Founder</h4>
+                                <span class="company">Innerbot</span>
+                                <p>Spearheading product development and GTM strategy for an AI learning platform.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <h4>Startup Lead</h4>
+                                <span class="company">U2CA Consultants</span>
+                                <p>Driving startup mandates, pitch decks, and financial modeling.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <h4>Founder’s Office Intern</h4>
+                                <span class="company">PrepSOM Labs</span>
+                                <p>Working directly with founders on critical operational problems.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <h4>MIS Intern</h4>
+                                <span class="company">TopTrove Foundation</span>
+                                <p>Managing intelligence systems and data-oriented reporting.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <h4>HR Intern</h4>
+                                <span class="company">BrainFlyers</span>
+                                <p>Streamlined human resource processes and talent acquisition.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Achievements & Certs -->
+                    <div class="timeline-column reveal-up" style="transition-delay: 200ms;">
+                        <!-- Achievements -->
+                        <div class="section-header">
+                            <span class="eyebrow">Milestones</span>
+                            <h2>Achievements</h2>
+                        </div>
+                        <div class="cards-list mb-gap">
+                            <div class="list-card glass-card">
+                                🏆 <strong>1st Place</strong> – NOVA Pitch Tank Competition
+                            </div>
+                            <div class="list-card glass-card">
+                                🥈 <strong>2nd Position</strong> – Zonal Level Netball (Northwest)
+                            </div>
+                            <div class="list-card glass-card">
+                                🏕️ <strong>Tritiya Pad</strong> – Hindustan Scout & Guide
+                            </div>
+                        </div>
+                        
+                        <!-- Certifications -->
+                        <div class="section-header">
+                            <span class="eyebrow">Continuous Learning</span>
+                            <h2>Certifications</h2>
+                        </div>
+                        <div class="cards-list">
+                            <div class="list-card glass-card">
+                                📜 McKinsey Forward Program
+                            </div>
+                            <div class="list-card glass-card">
+                                💼 JPMorgan Investment Banking Virtual Experience
+                            </div>
+                            <div class="list-card glass-card">
+                                🧑‍💼 HR Management – University of Minnesota (Coursera)
+                            </div>
+                            <div class="list-card glass-card">
+                                📊 Microsoft Excel – Coursera
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section">
+            <div class="container">
+                <div class="contact-card glass-card reveal-up">
+                    <div class="contact-header">
+                        <h2>Let's build something <span class="gradient-text gradient-4">amazing</span> together.</h2>
+                        <p>I am open to discussions regarding product management roles, operator positions, and early-stage startup opportunities.</p>
+                    </div>
+                    
+                    <div class="contact-methods">
+                        <a href="mailto:nimitgoel789@gmail.com" class="contact-item">
+                            <div class="icon-box">✉️</div>
+                            <div class="contact-details">
+                                <span class="contact-label">Email Me</span>
+                                <span class="contact-value">nimitgoel789@gmail.com</span>
+                            </div>
+                        </a>
+                        
+                        <a href="tel:+919958535421" class="contact-item">
+                            <div class="icon-box">📞</div>
+                            <div class="contact-details">
+                                <span class="contact-label">Call Me</span>
+                                <span class="contact-value">+91-9958535421</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">NGOEL<span class="dot">.</span></div>
+                    <p class="copyright">© 2024 Nimit Goel. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- Custom JS script for functionality -->
+    <script src="main.js"></script>
+</body>
+</html>
